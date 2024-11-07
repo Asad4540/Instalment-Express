@@ -27501,7 +27501,7 @@ footer .social-media-list div a .fab:hover {
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 960px) {
+@media only screen and (min-width: 768px) and (max-width: 990px) {
 
   h1,
   .uk-h1 {
@@ -27512,7 +27512,11 @@ footer .social-media-list div a .fab:hover {
     font-size: 0.8rem;
     line-height: 1;
   }
-  
+
+  .nk-pos-top{
+    right: 0 !important;
+  }
+
 
 }
 
@@ -27579,7 +27583,7 @@ footer .social-media-list div a .fab:hover {
   background-image: url('../img/header-back2.png');
 }
 
-.uki-container{
+.uki-container {
   display: flow-root;
   /* 1 */
   box-sizing: content-box;
@@ -27588,4 +27592,59 @@ footer .social-media-list div a .fab:hover {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+
+@media only screen and (min-width: 961px) and (max-width: 991px) {
+  .section-fiancial-peace {
+    left: unset !important;
+}
+
+  .right-zero-section{
+    right: 0 !important;
+  }
+
+}
+
+@media only screen and (min-width: 991px) and (max-width: 1200px) {
+  .in-liquid-3 .uk-width-1-2\@m {
+    padding-top: 0 !important;
+  }
+
+  .section-fiancial-peace {
+    left: unset !important;
+  }
+
+  .in-liquid-3 .uk-width-1-2\@m {
+    padding-top: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .uk-position-top-right {
+    top: -50px !important;
+    right: 0 !important;
+  }
+
+
+}
+
+@media only screen and (min-width: 600px) and (max-width: 991px) {
+  .section-justify-center{
+    justify-content: center !important;
+  }
+
+  .uk-position-top-right {
+    right: unset !important;
+  }
+}
+
+
+
+/* footer css */
+.foot-cent-img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
