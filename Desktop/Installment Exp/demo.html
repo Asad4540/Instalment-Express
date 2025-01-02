@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Slider Carousel (Infinite Loop)</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .carousel-container {
+            width: 1300px;
+            height: 600px;
+            overflow: hidden;
+            margin: 50px auto;
+            border: 2px solid #ccc;
+            position: relative;
+        }
+
+        /* Background color 80% from top, 20% white */
+        .carousel-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, #f0f0f0 80%, #fff 20%);
+            z-index: -1;
+        }
+
+        .carousel-wrapper {
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-slide {
+            width: 100%;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            background-color: transparent;
+        }
+
+        .carousel-slide img {
+            width: 500px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .carousel-slide h2 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .carousel-slide p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .image-hr-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* Center the image and HR */
+        }
+
+        .vertical-hr {
+            border: none;
+            border-left: 2px solid #333;
+            /* Change the color and thickness of the line */
+            height: 100px;
+            /* Height of the vertical line */
+            width: 0;
+            /* Makes it vertical */
+            margin: 20px 0;
+            /* Spacing above and below */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="carousel-container">
+        <div class="carousel-wrapper">
+            <!-- Slides -->
+            <div class="carousel-slide">
+                <div>
+                    <img src="./img/step-1.png" alt="Placeholder Image">
+                </div>
+                <div>
+                    <div class="image-hr-wrapper">
+                        <img src="./img/dot.png" style="width: 50px;" alt="Placeholder Image">
+                        <hr class="vertical-hr">
+                    </div>
+                </div>
+                <div>
+                    <p>01</p>
+                    <h2>Quick Application</h2>
+                    <p>Fill out a straightforward online form to apply quickly and kickstart the process without
+                        unnecessary delays or complications.</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div>
+                    <img src="./img/step-1.png" alt="Placeholder Image">
+                </div>
+                <div>
+                    <div class="image-hr-wrapper">
+                        <img src="./img/dot.png" style="width: 50px;" alt="Placeholder Image">
+                        <hr class="vertical-hr">
+                    </div>
+                </div>
+                <div>
+                    <p>02</p>
+                    <h2>Quick Application</h2>
+                    <p>Fill out a straightforward online form to apply quickly and kickstart the process without
+                        unnecessary delays or complications.</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div>
+                    <img src="./img/step-1.png" alt="Placeholder Image">
+                </div>
+                <div>
+                    <div class="image-hr-wrapper">
+                        <img src="./img/dot.png" style="width: 50px;" alt="Placeholder Image">
+                        <hr class="vertical-hr">
+                    </div>
+                </div>
+                <div>
+                    <p>03</p>
+                    <h2>Quick Application</h2>
+                    <p>Fill out a straightforward online form to apply quickly and kickstart the process without
+                        unnecessary delays or complications.</p>
+                </div>
+            </div>
+            <!-- Clone of the first slide for infinite looping -->
+            <div class="carousel-slide">
+                <img src="https://via.placeholder.com/100" alt="Placeholder Image">
+                <h2>Slide 1</h2>
+                <p>This is the first slide content.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const wrapper = document.querySelector('.carousel-wrapper');
+        const slides = document.querySelectorAll('.carousel-slide');
+        let currentIndex = 0;
+        const totalSlides = slides.length;
+        const slideHeight = slides[0].offsetHeight;
+
+        function showNextSlide() {
+            currentIndex++;
+            wrapper.style.transition = 'transform 0.5s ease-in-out';
+            wrapper.style.transform = `translateY(-${currentIndex * slideHeight}px)`;
+
+            // Reset the transition and index when we reach the cloned slide
+            if (currentIndex === totalSlides - 1) {
+                setTimeout(() => {
+                    wrapper.style.transition = 'none'; // Disable animation
+                    currentIndex = 0; // Reset to first slide
+                    wrapper.style.transform = `translateY(0)`; // Jump to the first slide
+                }, 500); // Wait for the transition to complete
+            }
+        }
+
+        setInterval(showNextSlide, 5000); // Slide every 5 seconds
+    </script>
+
+</body>
+
+</html>
