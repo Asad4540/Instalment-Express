@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VM Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .dashboard {
+            display: flex;
+            height: 100vh;
+        }
+
+        /* Updated Sidebar Styling */
+        .sidebar {
+            width: 250px;
+            background-color: #DCAE3A;
+            color: white;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar h2 {
+            color: #ffdd57;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 20px;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding: 10px;
+            display: block;
+            background-color: #000;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .sidebar ul li a:hover {
+            background-color: #ffdd57;
+            color: #003366;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div><img src="logo-black.png" alt="" style="width: 200px;"></div>
+            <!-- <h2>VEREIGEN MEDIA</h2> -->
+            <br><br>
+            <center>
+                <ul>
+                    <b>
+                        <li><a href="#">Home</a></li>
+                    </b>
+                    <b>
+                        <li><a href="#">Subscribers List</a></li>
+                    </b>
+                    <b>
+                        <li><a href="#">Templates</a></li>
+                    </b>
+                    <b>
+                        <!-- <li><a href="#">Industries</a></li> -->
+                    </b>
+                </ul>
+            </center>
+        </aside>
+
+        <main class="content">
+            <div class="form-container" style="width: 90%;">
+                <h1>Upload your Tal</h1>
+                <form id="upload-form" action="uploads.html">
+
+
+                    <div class="form-group">
+                        <label for="csv-file"><b>Select a file (CSV/XLSX):</b></label>
+                        <input type="file" id="csv-file" accept=".csv,.xlsx" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="csv-file"><b>Search By :</b></label>
+                        <!-- <input type="file" id="csv-file" accept=".csv,.xlsx" required> -->
+                        <div style="display: flex;">
+                            <input type="radio" name="selectby" id=""> &nbsp; By Country &nbsp;
+                            <input type="radio" name="selectby" id=""> &nbsp; By Industry
+                        
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="job-title"><b>Job Title:</b></label>
+                        <div class="multi-select" id="multi-select">
+                            <div class="tags-container" id="tags-container"></div>
+                            <select id="job-title-select">
+                                <option value="">Select Job Titles</option>
+                                <option value="Developer">IT Director</option>
+                                <option value="Designer">Director of Finance</option>
+                                <option value="Manager">IT Manager</option>
+                                <option value="Consultant">Director of Operations</option>
+                                <option value="Consultant">+22 more</option>
+
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="geography"><b>Employee Size:</b></label>
+                        <div class="multi-select" id="multi-select">
+                            <div class="tags-container" id="tags-container"></div>
+                            <select id="job-title-select">
+                                <option value="">Select Employee Size</option>
+                                <option value="Developer">1-10</option>
+                                <option value="Designer">10-100</option>
+                                <option value="Manager">100-250</option>
+                                <option value="Consultant">300 or Above</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="geography"><b>Geography:</b></label>
+                        <div class="multi-select" id="multi-select">
+                            <div class="tags-container" id="tags-container"></div>
+                            <select id="job-title-select">
+                                <option value="">Select Geography</option>
+                                <option value="Developer">United States</option>
+                                <option value="Designer">United Kingdom</option>
+                                <option value="Manager">Australia</option>
+                                <option value="Consultant">Texas</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <button
+                            style="padding: 10px;color: rgb(17, 115, 228);background-color: #ffffff;border: none;border-radius: 10px;">Show
+                            More Filters +</button>
+                    </div><br><br>
+
+                    <button type="submit" class="upload-btn">Upload List</button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
