@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VM Dashboard</title>
+    <link rel="stylesheet" href="upload.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div><img src="logo-black.png" style="width: 200px;" alt=""></div>
+            <center><h2 style="color: #585151;">VM Vault</h2></center><br>
+            <div class="filters-header">
+                <h3>Filters</h3>
+                <button class="clear-btn">Clear All</button>
+            </div>
+
+            <div class="search-filter">
+                <input type="text" placeholder="Search filters or values">
+            </div>
+
+            <div class="additional-filter">
+                <span>Additional filter applied:</span>
+                <button class="btn filter-applied"><b>ABM List Match:</b><hr style="margin-top: 5px;"><br> <span style="color: rgb(16, 90, 228);">ServiceNow + SMC United States
+                    TAL</span></button>
+            </div>
+
+            <hr>
+
+            <h4>Select Filters</h4>
+            <ul class="filters-list">
+                <li><a href="#">County  </a></li>
+                <li style="background-color: #000;border-radius:10px;padding: 5px;border:1px solid;"><a href="#"
+                        style="color: #fff;">Job Level<span style="color: #fff;font-size: 12px;padding-right: 15px;">
+                            <p>x</p>
+                        </span></a></li>
+                <li style="background-color: #000;border-radius:10px;padding: 5px;border:1px solid;"><a href="#"
+                        style="color: #fff;">Job Title<span
+                            style="color: #fff;font-size: 12px;padding-right: 15px;">
+                            <p>x</p>
+                        </span></a></li>
+                <li style="background-color: #000;border-radius:10px;padding: 5px;border:1px solid;"><a href="#"
+                        style="color: #fff;">Company Size<span style="color: #fff;font-size: 12px;padding-right: 15px;">
+                            <p>x</p>
+                        </span></a></li>
+                <li style="background-color: #000;border-radius:10px;padding: 5px;border:1px solid;"><a href="#"
+                        style="color: #fff;">Revenue<span style="color: #fff;font-size: 12px;padding-right: 15px;">
+                            <p>x</p>
+                        </span></a></li>
+                <li style="background-color: #000;border-radius:10px;padding: 5px;border:1px solid;"><a href="#"
+                        style="color: #fff;">Industry<span style="color: #fff;font-size: 12px;padding-right: 15px;">
+                            <p>x</p>
+                        </span></a></li>
+                <li style="background-color: #000;border-radius:10px;padding: 5px;border:1px solid;"><a href="#"
+                        style="color: #fff;">Job Function<span style="color: #fff;font-size: 12px;padding-right: 15px;">
+                            <p>x</p>
+                        </span></a></li>
+                <!-- <li><a href="#">Revenue </a></li> -->
+                <li><a href="#">Tech Installed </a></li>
+            </ul>
+
+            <hr>
+<!-- 
+            <h4>Companies</h4>
+            <ul class="filters-list">
+                <li><a href="#">Company Name </a></li>
+            </ul> -->
+
+            <button class="btn show-filters-btn" style="font-size: 16px;color: rgb(16, 90, 228);border: 1px solid black;background-color: #fff; ">Show All Filters +</button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Tabs -->
+            <div class="tabs">
+                <button class="tab-button active" onclick="showTab('contacts')">Total Audience Data (1.7M)</button>
+                <button class="tab-button" onclick="showTab('companies')">Companies (12,725)</button>
+                <!-- <button class="tab-button" onclick="showTab('scoops')">Scoops</button> -->
+            </div>
+
+            <!-- Tab Contents -->
+            <div class="tab-content" id="contacts">
+                <div class="contacts-header">
+                    <h3>Contacts</h3>
+                    <div class="buttons">
+                        <button class="btn outline"><i class="fas fa-filter"></i> Filters</button>
+                        <button class="btn primary">Export</button>
+                        <button class="btn secondary">Tag</button>
+                    </div>
+                </div>
+                <div class="contacts-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Company Name</th>
+                                <th>Job Title</th>
+                                <th>Industry</th>
+                            </tr>
+                        </thead>
+                        <tbody style="filter: blur(4px);">
+
+                            <tr>
+                                <td>Eric</td>
+                                <td>Bradford</td>
+                                <td>DRW Holdings</td>
+                                <td>Operations Manager</td>
+                                <td>Packaging And Containers Manufacturing</td>
+                            </tr>
+                            <tr>
+                                <td>Justin</td>
+                                <td>Jose</td>
+                                <td>COCA COLA COMPANY</td>
+                                <td>Director of Information Technology</td>
+                                <td>Rail Transportation</td>
+                            </tr>
+                            <tr>
+                                <td>Jonathan</td>
+                                <td>Tucker</td>
+                                <td>API Group Inc</td>
+                                <td>Director of Information Technology</td>
+                                <td>Utilities</td>
+                            </tr>
+                            <tr>
+                                <td>Marquetta</td>
+                                <td>Ekuri</td>
+                                <td>Roper Technologies, Inc.</td>
+                                <td>Operations Director</td>
+                                <td>Hospitals And Health Care</td>
+                            </tr>
+                            <tr>
+                                <td>Christine</td>
+                                <td>Taylor</td>
+                                <td>Guidehouse</td>
+                                <td>Director of Information Technology</td>
+                                <td>IT Services And IT Consulting</td>
+                            </tr>
+                            <tr>
+                                <td>Christopher</td>
+                                <td>Nguyen</td>
+                                <td>CANON USA</td>
+                                <td>Operations Manager</td>
+                                <td>Medical Equipment Manufacturing</td>
+                            </tr>
+                            <tr>
+                                <td>Josh</td>
+                                <td>Zook</td>
+                                <td>Cerberus Capital Management LP</td>
+                                <td>Director of Finance</td>
+                                <td>Financial Services</td>
+                            </tr>
+                            <tr>
+                                <td>Dion</td>
+                                <td>Horman</td>
+                                <td>Cedars-Sinai Health System</td>
+                                <td>Manager of Information Technology</td>
+                                <td>Dairy Product Manufacturing</td>
+                            </tr>
+                            <tr>
+                                <td>Emily</td>
+                                <td>Mochan</td>
+                                <td>LANDRYS SEAFOOD RESTAURANTS</td>
+                                <td>Director of Finance</td>
+                                <td>Hospitals And Health Care</td>
+                            </tr>
+                            <tr>
+                                <td>Teresa</td>
+                                <td>Ostapower</td>
+                                <td>FL-SHRINERS HOSPITAL FOR CHILDREN</td>
+                                <td>Information Technology Project Manager</td>
+                                <td>IT Services And IT Consulting</td>
+                            </tr>
+                            <tr>
+                                <td>Michael</td>
+                                <td>Gay</td>
+                                <td>STERLING TALENT</td>
+                                <td>Director of Finance</td>
+                                <td>Telecommunications</td>
+                            </tr>
+                            <tr>
+                                <td>Krishna</td>
+                                <td>Nittala</td>
+                                <td>Paul Davis Emergency Services</td>
+                                <td>Operations Director</td>
+                                <td>Retail Apparel And Fashion</td>
+                            </tr>
+                            <tr>
+                                <td>Shawn</td>
+                                <td>Walters</td>
+                                <td>SIRVA</td>
+                                <td>IT Manager</td>
+                                <td>Transportation Logistics Supply Chain And Storage</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Winstead</td>
+                                <td>THOMAS JAMES HOMES</td>
+                                <td>Manager of Information Technology</td>
+                                <td>Telecommunications</td>
+                            </tr>
+                            <tr>
+                                <td>Michael</td>
+                                <td>Lory</td>
+                                <td>INTELLIBRIDGE</td>
+                                <td>Director of Information Technology</td>
+                                <td>Software Development</td>
+                            </tr>
+                            <tr>
+                                <td>Ryan</td>
+                                <td>Bothwell</td>
+                                <td>Helm Group</td>
+                                <td>Chief Information Officer</td>
+                                <td>Retail</td>
+                            </tr>
+                            <tr>
+                                <td>Richelle</td>
+                                <td>Bagdasarian</td>
+                                <td>Cencora (AmerisourceBergen)</td>
+                                <td>IT Manager</td>
+                                <td>Hospitals And Health Care</td>
+                            </tr>
+                            <tr>
+                                <td>Andrew</td>
+                                <td>Townend</td>
+                                <td>AVENTIV TECHNOLOGIES</td>
+                                <td>IT Manager</td>
+                                <td>Retail</td>
+                            </tr>
+                            <tr>
+                                <td>James</td>
+                                <td>Lehnhoff</td>
+                                <td>DRS TECHNOLOGIES</td>
+                                <td>Operations Director</td>
+                                <td>Software Development</td>
+                            </tr>
+                            <tr>
+                                <td>Joe</td>
+                                <td>Bohte</td>
+                                <td>Lutron Electronics Co</td>
+                                <td>Operations Director</td>
+                                <td>Machinery Manufacturing</td>
+                            </tr>
+                            <tr>
+                                <td>Melissa</td>
+                                <td>Stamato</td>
+                                <td>GERSON LEHRMAN GROUP INC</td>
+                                <td>IT Manager</td>
+                                <td>IT Services And IT Consulting</td>
+                            </tr>
+
+                            <!-- Add other rows as needed -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="tab-content" id="companies" style="display: none;">
+                <h3>Companies</h3>
+                <p>Companies content will go here.</p>
+            </div>
+
+            <div class="tab-content" id="scoops" style="display: none;">
+                <h3>Scoops</h3>
+                <p>Scoops content will go here.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS for Tabs and Redirection -->
+    <script src="upload.js"></script>
+</body>
+
+</html>
