@@ -89,7 +89,7 @@
         <main class="content">
             <div class="form-container" style="width: 90%;">
                 <h1>Upload your Tal</h1>
-                <form id="upload-form" action="uploads.html">
+                <form id="upload-form" action="upload.html">
 
 
                     <div class="form-group">
@@ -101,9 +101,9 @@
                         <label for="csv-file"><b>Search By :</b></label>
                         <!-- <input type="file" id="csv-file" accept=".csv,.xlsx" required> -->
                         <div style="display: flex;">
-                            <input type="radio" name="selectby" id=""> &nbsp; By Country &nbsp;
-                            <input type="radio" name="selectby" id=""> &nbsp; By Industry
-                        
+                            <input type="radio" name="selectby" id=""> &nbsp; By Company Name &nbsp;
+                            <input type="radio" name="selectby" id=""> &nbsp; By Domain
+
                         </div>
                     </div>
 
@@ -114,29 +114,80 @@
                             <div class="tags-container" id="tags-container"></div>
                             <select id="job-title-select">
                                 <option value="">Select Job Titles</option>
-                                <option value="Developer">IT Director</option>
-                                <option value="Designer">Director of Finance</option>
-                                <option value="Manager">IT Manager</option>
-                                <option value="Consultant">Director of Operations</option>
-                                <option value="Consultant">+22 more</option>
+                                <option value="Chief Information Security Officer">Chief Information Security Officer
+                                </option>
+                                <option value="Security Manager">Security Manager</option>
+                                <option value="Director Of Security ">Director Of Security </option>
+                                <option value="Head Of Security ">Head Of Security </option>
+                                <option value="VP Of Security ">VP Of Security </option>
+                                <option value="Vice President Of Security ">Vice President Of Security </option>
+                                <option value="Director Of Cyber Security ">Director Of Cyber Security </option>
+                                <option value="Head Of Cyber Security ">Head Of Cyber Security </option>
+                                <option value="VP Of Cyber Security ">VP Of Cyber Security </option>
+                                <option value="Vice President Of Cyber Security ">Vice President Of Cyber Security
+                                </option>
+                                <option value="Web Developer">Web Developer</option>
+                                <option value="Consultant">+99 more</option>
 
                             </select>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="geography"><b>Employee Size:</b></label>
+                        <label for="job-title"><b>Industry:</b></label>
                         <div class="multi-select" id="multi-select">
                             <div class="tags-container" id="tags-container"></div>
-                            <select id="job-title-select">
-                                <option value="">Select Employee Size</option>
-                                <option value="Developer">1-10</option>
-                                <option value="Designer">10-100</option>
-                                <option value="Manager">100-250</option>
-                                <option value="Consultant">300 or Above</option>
+                            <select id="indu-select">
+                                <option value="">Select Industry</option>
+                                <option value="Education Management">Education Management</option>
+                                <option value="E-Learning">E-Learning</option>
+                                <option value="Higher Education">Higher Education</option>
+                                <option value="Primary/Secondary Education">Primary/Secondary Education</option>
+                                <option value="Research">Research</option>
+                                <option value="Building Materials">Building Materials</option>
+                                <option value="Civil Engineering">Civil Engineering</option>
+                                <option value="Construction">Construction</option>
+                                <option value="Architecture & Planning">Architecture & Planning</option>
+                                <option value="Design">Design</option>
+                                <option value="Graphic Design">Graphic Design</option>
+                                <option value="Accounting">Accounting</option>
+                                <option value="Business Supplies & Equipment">Business Supplies & Equipment</option>
+                                <option value="Environmental Services">Environmental Services</option>
+                                <option value="Events Services">Events Services</option>
+                                <option value="Executive Office">Executive Office</option>
+                                <option value="Facilities Services">Facilities Services</option>
+                                <option value="Human Resources">Human Resources</option>
+                                <option value="Information Services">Information Services</option>
+                                <option value="Management Consulting">Management Consulting</option>
+                                <option value="Outsourcing/Offshoring">Outsourcing/Offshoring</option>
+                                <option value="Professional Training & Coaching">Professional Training & Coaching
+                                </option>
+                                <option value="Security & Investigations">Security & Investigations</option>
+                                <option value="Staffing & Recruiting">Staffing & Recruiting</option>
+                                <option value="Investment Banking">Investment Banking</option>
                             </select>
                         </div>
                     </div>
+
+
+                    <div class="form-group">
+                        <label for="Employee-size"><b>Employee Size:</b></label>
+                        <div class="multi-select2" id="multi-select2">
+                            <div class="tags-container2" id="tags-container2"></div>
+                            <select id="industry-select">
+                                <option value="">Select Employee Size</option>
+                                <option value="1-10">1-10</option>
+                                <option value="11-50">11-50</option>
+                                <option value="51-200">51-200</option>
+                                <option value="201-500">201-500</option>
+                                <option value="501-1000">501-1000</option>
+                                <option value="1001-5000">1001-5000</option>
+                                <option value="5001-10000">5001-10000</option>
+                                <option value="10000+">10000+</option>
+                            </select>
+                        </div>
+                    </div>
+
 
                     <div class="form-group">
                         <label for="geography"><b>Geography:</b></label>
