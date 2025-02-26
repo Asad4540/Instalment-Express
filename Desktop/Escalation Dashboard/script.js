@@ -1,5 +1,10 @@
 const jobTitleSelect = document.getElementById('job-title-select');
+const industrySelect = document.getElementById('industry-select');
+
 const tagsContainer = document.getElementById('tags-container');
+const tagsContainer2 = document.getElementById('tags-container2');
+
+
 
 jobTitleSelect.addEventListener('change', function() {
     const selectedValue = jobTitleSelect.value;
@@ -11,6 +16,17 @@ jobTitleSelect.addEventListener('change', function() {
 
     // Reset the select box
     jobTitleSelect.value = '';
+});
+
+industrySelect.addEventListener('change', function() {
+    const selectedValue = industrySelect .value;
+    const selectedText = industrySelect .options[industrySelect .selectedIndex].text;
+    if (selectedValue !== '') {
+        addTag2(selectedValue, selectedText);
+    }
+
+    // Reset the select box
+    industrySelect .value = '';
 });
 
 function addTag(value, text) {
@@ -33,8 +49,37 @@ function addTag(value, text) {
     removeButton.addEventListener('click', function() {
         tagsContainer.removeChild(tag);
     });
-
+    console.log('tagText: '+tagText);
     tag.appendChild(tagText);
     tag.appendChild(removeButton);
     tagsContainer.appendChild(tag);
 }
+
+
+function addTag2(value, text) {
+    // Check if the tag already exists
+    if (document.querySelector(`.tag[data-value="${value}"]`)) {
+        return; // Do not add duplicate tags
+    }
+
+    // Create a new tag element
+    const tag = document.createElement('div');
+    tag.classList.add('tag');
+    tag.setAttribute('data-value', value);
+
+    const tagText = document.createElement('span');
+    tagText.textContent = text;
+
+    const removeButton = document.createElement('button');
+    removeButton.classList.add('remove-tag');
+    removeButton.innerHTML = '&times;';
+    removeButton.addEventListener('click', function() {
+        tagsContainer2.removeChild(tag);
+    });
+    console.log('tagText: '+tagText);
+    tag.appendChild(tagText);
+    tag.appendChild(removeButton);
+    tagsContainer2.appendChild(tag);
+}
+
+
