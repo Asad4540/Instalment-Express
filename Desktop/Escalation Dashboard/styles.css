@@ -121,6 +121,20 @@ input[type="file"] {
     margin-bottom: 10px;
 }
 
+.tags-container3 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.tags-container4 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
 .tag {
     background-color: #000;
     color: white;
